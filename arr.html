@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //VD1 : Tính tổng số chẵn trong mảng 
+
+    // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // function TinhTongSoChan(array) {
+    //   let tong = 0;
+    //   for (const item of array) {
+    //     if (item % 2 == 0) {
+    //       tong += item;
+    //     }
+    //   }
+    //   return tong;
+    // }
+    // let KQ = TinhTongSoChan(arr);
+    // console.log(KQ);
+
+    //VD2 : Nhập số n > 0 , dựa vào n tính :
+    // 1/n+2/n+3/n+...+n/n
+
+    // function tinhbieuthuc(n) {
+    //   let KQ = 0;
+    //   for (var i = 1; i <= n; i++) {
+    //     KQ += i / n;
+    //   }
+    //   return KQ;
+    // }
+    // do {
+    //   let n = prompt("Nhập số n:");
+    //   n = parseInt(n);
+    //   if (n <= 0) {
+    //     console.log("Vui long nhap so lon hon 0");
+    //   } else {
+    //     let KQ = tinhbieuthuc(n);
+    //     console.log(KQ);
+    //   }
+    //   // console.log(n);
+    // } while (n <= 0);
+
+
+
+    const arr = [
+      {
+        ten: "Mai Gia Bảo",
+        diem: 8
+      },
+      {
+        ten: "Thùy Linh",
+        diem: 7.5
+      },
+      {
+        ten: "Hồng Phúc",
+        diem: 7
+      },
+      {
+        ten: "Tiến Mạnh",
+        diem: 8.5
+      },
+
+    ]
+    const xemDiem = arr.filter(function (item) {
+      return item.diem >= 8;
+    });
+    console.log(xemDiem);
+
+    //map()
+
+    // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // let kq = arr.map((item, idex, array) => {
+    //   let hocluc = "";
+    //   if (item.diem >= 8) {
+    //     hocluc = "Giỏi";
+    //   } else if (item.diem >= 6.5 && item.diem < 8) {
+    //     hocluc = "Khá";
+    //   } else {
+    //     hocluc = "Trung Bình";
+    //   }
+
+    //   return {
+    //     ten: item.diem,
+    //     hocluc: hocluc
+    //   }
+    // });
+    // console.log(kq);
+
+    //reduce()
+
+    // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // let trungbinh = number.reduce((total, item) => {
+    //   // console.log(item);
+    //   return total + item / number.length;
+    // }, 0);
+    // console.log(trungbinh);
+
+
+    // const arr = [
+    //   {
+    //     ten: "Mai Gia Bảo",
+    //     diem: 8
+    //   },
+    //   {
+    //     ten: "Thùy Linh",
+    //     diem: 7.5
+    //   },
+    //   {
+    //     ten: "Hồng Phúc",
+    //     diem: 7
+    //   },
+    //   {
+    //     ten: "Tiến Mạnh",
+    //     diem: 8.5
+    //   },
+    // ]
+
+
+    // let trungbinh = arr.reduce((total, item) => {
+    //   // console.log(item);
+    //   return total + item.diem;
+    // }, 0);
+    // console.log(trungbinh);
+  </script>
+</body>
+
+</html>
